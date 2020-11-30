@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="737.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wit.comp1050.gameStageController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="588.0" prefWidth="600.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="588.0" prefWidth="134.0">
+               <children>
+                  <Label alignment="CENTER" text="C O N T R O L S" underline="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="154.0" prefWidth="131.0" text="CLICK ON COLORED PEGS TO MAKE GUESSES. CLICK THE DELETE BUTTON TO DELETE THE PREVIOUS GUESS CIRCLE." textAlignment="CENTER" wrapText="true" />
+               </children>
+            </VBox>
+            <VBox fx:id="guessVBox" alignment="BOTTOM_CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="588.0" prefWidth="285.0" spacing="10">
+               <children>
+                  <HBox alignment="CENTER" maxHeight="67.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="286.0" spacing="20.0">
+                     <children>
+                        <Circle fx:id="circle10" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="circle11" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="circle12" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fx:id="circle13" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox fx:id="pegsVBox" alignment="BOTTOM_CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="588.0" prefWidth="55.0" spacing="6.0">
+               <children>
+                  <FlowPane fx:id="pegsFlowPane" alignment="CENTER" hgap="2.5" maxHeight="67.0" prefHeight="0.0" prefWidth="55.0" vgap="2.5">
+                     <children>
+                        <Circle fill="WHITE" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fill="WHITE" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fill="WHITE" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Circle fill="WHITE" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                  </FlowPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox fx:id="colorPegsHBox" alignment="CENTER" prefHeight="73.0" prefWidth="600.0" spacing="20.0">
+         <children>
+            <Circle fx:id="redCircle" fill="#ff4e4e" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="orangeCircle" fill="#ff9f00" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="yellowCircle" fill="#e2ff70" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="greenCircle" fill="#95ff8d" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="blueCircle" fill="#6469fd" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="purpleCircle" fill="#c252ff" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </HBox>
+      <Button fx:id="deleteButton" mnemonicParsing="false" text="D E L E T E" />
+      <Button fx:id="makeGuessButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="M A K E   G U E S S" />
+   </children>
+</VBox>

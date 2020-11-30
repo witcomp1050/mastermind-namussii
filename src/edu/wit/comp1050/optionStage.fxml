@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wit.comp1050.optionsController">
+   <children>
+      <Pane prefHeight="95.0" prefWidth="600.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="78.0" prefWidth="600.0" text="O P T I O N S">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <HBox prefHeight="224.0" prefWidth="600.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="318.0" prefWidth="300.0" spacing="50.0">
+               <children>
+                  <Label fx:id="dupColorsLabel" alignment="CENTER" text="D U P L I C A T E   C O L O R S" />
+                  <Label fx:id="numOfGuessesLabel" alignment="CENTER" text="N U M B E R   O F   G U E S S   R O W S" />
+                  <Label fx:id="blankSpacesLabel" alignment="CENTER" text="B L A N K   S P A C E S" />
+               </children>
+            </VBox>
+            <VBox fx:id="comboBoxVBox" alignment="CENTER" minWidth="300.0" prefHeight="318.0" prefWidth="300.0" spacing="45.0">
+               <children>
+                  <ComboBox fx:id="dupColorsComboBox" prefWidth="150.0">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:id="dupColorsTrue" fx:value="T R U E  (D E F A U L T)" />
+                           <String fx:id="dupColorsFalse" fx:value="F A L S E" />
+                        </FXCollections>
+                     </items>
+                  </ComboBox>
+
+                  <ComboBox fx:id="numOfGuessesComboBox" prefWidth="150.0">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:id="option8" fx:value="8" />
+                           <String fx:id="option10" fx:value="10  (D E F A U L T)" />
+                           <String fx:id="option12" fx:value="12" />
+                        </FXCollections>
+                     </items>
+                  </ComboBox>
+                  <ComboBox fx:id="blankSpaceComboBox" prefWidth="150.0">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:id="blankSpaceTrue" fx:value="T R U E" />
+                           <String fx:id="blankSpaceFalse" fx:value="F A L S E  (D E F A U L T)" />
+                        </FXCollections>
+                     </items>
+                  </ComboBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Pane prefHeight="91.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="startGameButton" alignment="CENTER" contentDisplay="CENTER" layoutX="242.0" layoutY="28.0" mnemonicParsing="false" text="S T A R T   G A M E" />
+         </children>
+      </Pane>
+   </children>
+</VBox>
